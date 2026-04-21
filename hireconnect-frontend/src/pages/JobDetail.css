@@ -1,0 +1,198 @@
+.job-detail-page { padding-top: 64px; }
+
+.jd-layout {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 24px;
+  padding: 36px 0 60px;
+  align-items: start;
+}
+
+.jd-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text2);
+  font-size: 0.85rem;
+  margin-bottom: 20px;
+  transition: var(--transition);
+  text-decoration: none;
+}
+.jd-back:hover { color: var(--text); }
+
+.jd-main { display: flex; flex-direction: column; gap: 16px; }
+
+.jd-header { padding: 24px; }
+
+.jd-header-top {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.jd-company-icon {
+  width: 56px; height: 56px;
+  border-radius: 16px;
+  background: var(--accent-grad);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.4rem;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.jd-title-block { flex: 1; }
+
+.jd-title {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.jd-meta-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.jd-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--text2);
+  font-size: 0.82rem;
+}
+
+.jd-tags-row { display: flex; gap: 8px; flex-wrap: wrap; }
+
+.jd-section { padding: 24px; }
+
+.jd-section-title {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 16px;
+}
+
+.jd-description {
+  color: var(--text2);
+  line-height: 1.75;
+  font-size: 0.92rem;
+  white-space: pre-line;
+}
+
+.jd-skills { display: flex; gap: 8px; flex-wrap: wrap; }
+
+.jd-skill-tag {
+  padding: 6px 14px;
+  border-radius: 8px;
+  background: var(--bg3);
+  border: 1.5px solid var(--border);
+  color: var(--text);
+  font-size: 0.82rem;
+  font-weight: 500;
+}
+
+/* Sidebar */
+.jd-sidebar { position: sticky; top: 84px; }
+
+.jd-apply-card { display: flex; flex-direction: column; gap: 16px; }
+
+.jd-salary {}
+.jd-salary-label { font-size: 0.75rem; color: var(--text3); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 4px; }
+.jd-salary-value { font-family: var(--font-display); font-size: 1.3rem; font-weight: 700; color: var(--green); }
+
+.jd-info-list { display: flex; flex-direction: column; gap: 10px; }
+
+.jd-info-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+}
+.jd-info-item:last-child { border-bottom: none; }
+
+.jd-info-label { font-size: 0.8rem; color: var(--text3); }
+.jd-info-value { font-size: 0.85rem; font-weight: 500; color: var(--text); }
+
+.jd-closed-notice {
+  text-align: center;
+  color: var(--text3);
+  font-size: 0.85rem;
+  padding: 12px;
+  background: var(--bg3);
+  border-radius: var(--radius);
+}
+
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+  backdrop-filter: blur(4px);
+  padding: 24px;
+}
+
+.modal {
+  background: var(--card2);
+  border: 1.5px solid var(--border2);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: var(--shadow-lg);
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.modal-title {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  color: var(--text2);
+  font-size: 1.1rem;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 6px;
+  transition: var(--transition);
+}
+.modal-close:hover { color: var(--text); background: var(--bg3); }
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+@media (max-width: 768px) {
+  .jd-layout { grid-template-columns: 1fr; }
+  .jd-sidebar { position: static; }
+}

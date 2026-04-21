@@ -1,0 +1,111 @@
+.recruiter-page { padding-top: 64px; }
+
+.recruiter-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 36px 0 28px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.recruiter-layout {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 24px;
+  align-items: start;
+  padding-bottom: 60px;
+}
+
+.recruiter-jobs {}
+
+.recruiter-job-item {
+  padding: 16px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.recruiter-job-item.selected {
+  border-color: var(--accent);
+  background: var(--card2);
+}
+
+.recruiter-job-item:hover { border-color: var(--border2); }
+
+.rji-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+  gap: 10px;
+}
+
+.rji-title {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--text);
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.rji-meta {
+  display: flex;
+  gap: 10px;
+  color: var(--text3);
+  font-size: 0.75rem;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+.rji-actions { display: flex; gap: 6px; }
+
+/* Application Review */
+.recruiter-apps {}
+
+.no-job-selected {
+  text-align: center;
+  padding: 60px 24px;
+  color: var(--text2);
+}
+
+.app-review-card {
+  margin-bottom: 12px;
+  padding: 18px;
+}
+
+.arc-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  gap: 12px;
+}
+
+.arc-candidate { font-weight: 600; color: var(--text); font-size: 0.9rem; }
+.arc-date { font-size: 0.75rem; color: var(--text3); margin-top: 2px; }
+
+.arc-cover {
+  color: var(--text2);
+  font-size: 0.85rem;
+  line-height: 1.6;
+  background: var(--bg3);
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.status-select {
+  width: auto;
+  min-width: 150px;
+  padding: 6px 10px;
+  font-size: 0.82rem;
+  border-radius: 8px;
+}
+
+.modal-lg { max-width: 680px; max-height: 90vh; overflow-y: auto; }
+
+@media (max-width: 900px) {
+  .recruiter-layout { grid-template-columns: 1fr; }
+}

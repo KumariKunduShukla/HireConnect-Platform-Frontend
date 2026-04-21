@@ -1,0 +1,263 @@
+.auth-page {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* Left Panel */
+.auth-left {
+  background: var(--bg2);
+  border-right: 1px solid var(--border);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.auth-left::before {
+  content: '';
+  position: absolute;
+  width: 500px; height: 500px;
+  background: radial-gradient(circle, rgba(79,142,247,0.12), transparent 70%);
+  top: -100px; left: -100px;
+  pointer-events: none;
+}
+
+.auth-brand { margin-bottom: auto; }
+
+.auth-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.auth-illustration {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+}
+
+/* Mock Job Card */
+.auth-card-mock {
+  background: var(--card);
+  border: 1.5px solid var(--border2);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  width: 100%;
+  max-width: 340px;
+  box-shadow: var(--shadow-lg);
+}
+
+.auth-mock-badge { margin-bottom: 12px; }
+
+.auth-mock-title {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.auth-mock-company {
+  font-size: 0.83rem;
+  color: var(--text2);
+  margin-bottom: 16px;
+}
+
+.auth-mock-tags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.auth-mock-salary {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--green);
+}
+
+.auth-left-quote {
+  text-align: center;
+  color: var(--text2);
+  font-size: 0.9rem;
+  line-height: 1.7;
+  font-style: italic;
+}
+
+/* Steps Display */
+.auth-steps-display {
+  width: 100%;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.auth-step-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 0;
+}
+
+.step-circle {
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  background: var(--bg3);
+  border: 2px solid var(--border2);
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700;
+  font-size: 0.88rem;
+  color: var(--text3);
+  flex-shrink: 0;
+  transition: var(--transition);
+}
+
+.auth-step-item.done .step-circle {
+  background: var(--accent-grad);
+  border-color: transparent;
+  color: #fff;
+}
+
+.step-title {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--text);
+}
+
+.step-sub {
+  font-size: 0.78rem;
+  color: var(--text3);
+  margin-top: 2px;
+}
+
+.step-line {
+  width: 2px;
+  height: 24px;
+  background: var(--border);
+  margin-left: 19px;
+}
+
+/* Right Panel */
+.auth-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 24px;
+  background: var(--bg);
+}
+
+.auth-box {
+  width: 100%;
+  max-width: 420px;
+}
+
+.auth-title {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+
+.auth-sub {
+  color: var(--text2);
+  font-size: 0.9rem;
+  margin-bottom: 28px;
+}
+
+.auth-form { margin-bottom: 20px; }
+
+.auth-submit {
+  width: 100%;
+  justify-content: center;
+  padding: 13px;
+  font-size: 0.95rem;
+  margin-top: 8px;
+}
+
+.auth-divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 20px 0;
+  color: var(--text3);
+  font-size: 0.8rem;
+}
+.auth-divider::before, .auth-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+.auth-github {
+  width: 100%;
+  justify-content: center;
+  padding: 12px;
+  margin-bottom: 20px;
+}
+
+.auth-footer-text {
+  color: var(--text3);
+  font-size: 0.85rem;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.auth-footer-text a {
+  color: var(--accent);
+  font-weight: 500;
+}
+.auth-footer-text a:hover { text-decoration: underline; }
+
+/* Role Toggle */
+.role-toggle {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.role-btn {
+  padding: 12px;
+  border-radius: var(--radius);
+  background: var(--bg3);
+  border: 1.5px solid var(--border);
+  color: var(--text2);
+  font-size: 0.88rem;
+  font-weight: 500;
+  transition: var(--transition);
+  cursor: pointer;
+  font-family: var(--font-body);
+}
+.role-btn:hover { border-color: var(--accent); color: var(--text); }
+.role-btn.active { border-color: var(--accent); background: rgba(79,142,247,0.1); color: var(--accent); }
+
+/* OTP */
+.otp-header { text-align: center; margin-bottom: 24px; }
+.otp-icon { font-size: 2.5rem; margin-bottom: 12px; }
+
+/* Spinner */
+.spinner {
+  display: inline-block;
+  width: 16px; height: 16px;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .auth-page { grid-template-columns: 1fr; }
+  .auth-left { display: none; }
+  .auth-right { padding: 24px 16px; }
+  .auth-box { max-width: 100%; }
+}

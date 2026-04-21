@@ -1,0 +1,54 @@
+.recruiter-perks {
+  width: 100%;
+  max-width: 320px;
+}
+
+.perks-title {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 20px;
+}
+
+.perk-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+}
+.perk-item:last-child { border-bottom: none; }
+
+.perk-icon { font-size: 1.3rem; }
+
+.perk-text {
+  font-size: 0.88rem;
+  color: var(--text2);
+}
+
+.info-box {
+  display: flex;
+  gap: 12px;
+  background: rgba(79,142,247,0.08);
+  border: 1.5px solid rgba(79,142,247,0.2);
+  border-radius: var(--radius);
+  padding: 14px;
+  margin-bottom: 16px;
+}
+
+.info-box-icon { font-size: 1.1rem; flex-shrink: 0; margin-top: 1px; }
+.info-box-title { font-weight: 600; font-size: 0.88rem; color: var(--text); margin-bottom: 4px; }
+.info-box-text { font-size: 0.82rem; color: var(--text2); line-height: 1.55; }
+
+.link-btn {
+  background: none;
+  border: none;
+  color: var(--accent);
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: var(--font-body);
+  padding: 0;
+}
+.link-btn:hover { text-decoration: underline; }

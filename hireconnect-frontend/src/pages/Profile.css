@@ -1,0 +1,84 @@
+.profile-page {
+  padding: 1.5rem 0 2.5rem;
+}
+
+.profile-container {
+  max-width: 960px;
+}
+
+.profile-header {
+  margin-bottom: 1rem;
+}
+
+.profile-card {
+  padding: 1.25rem;
+}
+
+.profile-loading {
+  text-align: center;
+  color: #6b7280;
+}
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+
+.profile-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.profile-field span {
+  font-size: 0.83rem;
+  color: #9ca3af;
+  font-weight: 600;
+}
+
+.profile-field input,
+.profile-field textarea {
+  width: 100%;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+  border-radius: 10px;
+  padding: 0.7rem 0.8rem;
+  font-size: 0.9rem;
+  font-family: inherit;
+}
+
+.profile-field input:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.profile-field textarea {
+  resize: vertical;
+  min-height: 110px;
+}
+
+.profile-field-full {
+  grid-column: 1 / -1;
+}
+
+.profile-actions {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media (max-width: 760px) {
+  .profile-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-actions {
+    justify-content: stretch;
+  }
+
+  .profile-actions .btn {
+    width: 100%;
+  }
+}
